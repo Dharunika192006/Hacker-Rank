@@ -1,0 +1,16 @@
+
+def Errors_exception(T):
+    for _ in range(T):
+        data = input().split()
+        try:
+            print(int(data[0])//int(data[1]))
+        except ZeroDivisionError as ze:
+            print(f"Error Code: {ze}")
+        except ValueError as ve:
+            print(f"Error Code: {ve}")
+
+
+
+if __name__ == '__main__':
+    T = int(input())
+    Errors_exception(T)
