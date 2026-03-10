@@ -1,0 +1,42 @@
+def print_formatted(number):
+    # your code goes here
+    wth = len(bin(number)) - 2
+
+    for i in range(1, (number + 1)):  
+        lst_2 = []  
+        lst_3 = []  
+        lst_4 = []  
+        
+        # 10  
+        print(str(i).rjust(wth, ' '), end='\t')  
+        
+        # 8  
+        j = i  
+        while j >= 1:  
+            lst_2.insert(0, str(j % 8))  # Convert elements to strings  
+            j //= 8  # Using integer division  
+        str2 = ''.join(lst_2)
+        print(str2.rjust(wth, ' '), end='\t')  
+        
+        # 16  
+        j = i  
+        while j >= 1:  
+            if (j % 16) < 10:  
+                lst_3.insert(0, str(j % 16)) 
+            else:  
+                x = j % 16  
+                ch = chr(x + 55)  # Capital letters A-F correspond to 65-70.  
+                lst_3.insert(0, ch)  
+            j //= 16   
+        str3 = ''.join(lst_3)
+        print(str3.rjust(wth, ' '), end='\t')  
+
+        # 2  
+        j = i  
+        while j >= 1:  
+            lst_4.insert(0, str(j % 2))  
+            j //= 2 
+        str4 = ''.join(lst_4)
+        print(str4.rjust(wth, ' '), end='\t')  
+        
+        print()  # Line feed output for easy viewing of results
