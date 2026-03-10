@@ -1,0 +1,10 @@
+import re
+
+T = int(input())
+
+for _ in range(T):  
+    try:
+        x = re.search(input(), "eheheh")
+        print("True")   
+    except:
+        print("False")
