@@ -1,0 +1,32 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import Counter
+
+X = input()
+sizes = input().split(" ")
+N = input()
+
+shoes_summry = Counter(sizes).items()
+shoes_summry = dict(shoes_summry)
+
+sold_out_cnt = {i: 0 for i in Counter(sizes).keys()}
+earned = 0
+
+
+for i in range(int(N)):
+    size_price = input().split(" ")
+    shoe_size, price = size_price
+    price = int(price)
+    
+    if shoe_size in sold_out_cnt:
+        cnt = sold_out_cnt.get(shoe_size) + 1
+        sold_out_cnt[shoe_size] = cnt
+        limit = shoes_summry.get(shoe_size)
+        
+        if sold_out_cnt[shoe_size] <= limit:
+            earned += price
+
+    else:
+        continue  
+          
+
+print(earned) 
