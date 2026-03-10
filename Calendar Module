@@ -1,0 +1,8 @@
+
+import calendar
+
+s = list(map(int, input().split()))
+
+dicit = {0: "MONDAY", 1: "TUESDAY", 2: "WEDNESDAY", 3: "THURSDAY", 4:"FRIDAY", 5: "SATURDAY", 6: "SUNDAY"}
+
+print(dicit[calendar.weekday(s[2], s[0], s[1])])
