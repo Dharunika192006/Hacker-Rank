@@ -1,0 +1,5 @@
+
+n = int(input())
+for i in range(n):
+    if i <= n: # if you also skip this line 
+        print(i**2)
