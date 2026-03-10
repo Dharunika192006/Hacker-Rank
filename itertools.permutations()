@@ -1,0 +1,8 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import permutations
+mystr, k=list(input().split(' '))
+string = mystr.upper()
+res = list(permutations(string, int(k)))
+for i in sorted(res):
+    restr = ''.join(i)
+    print(restr)
