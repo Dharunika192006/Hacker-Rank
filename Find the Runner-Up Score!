@@ -1,0 +1,20 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    
+arr =sorted(arr)
+if len(arr) ==1:#checks whether the array have one element and of so end the program 
+    print("array of a single element")
+    exit()
+f  = arr[-1] #f stands for final element
+next_element=1
+
+for i in arr:
+    if  i<f and arr[next_element]==f:
+        print(i)
+        break
+    elif i==f:  #if i is the same as f and the first condition is met and didnt break that means all the values are the same 
+        print("all values are the same")
+        break 
+    else: #if the element is not found and i!=f try the next element  
+        next_element=next_element+1
