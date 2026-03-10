@@ -1,0 +1,12 @@
+from itertools import combinations
+
+# Read input
+data = input().split()
+word = sorted(data[0])  # Sort characters in words
+length = int(data[1])  # Take the length of the combinations
+
+# Display the output in the desired format
+for i in range(1, length + 1):
+    result = combinations(word, i)
+    for comb in result:
+        print("".join(comb))
